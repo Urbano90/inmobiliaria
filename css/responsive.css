@@ -1,0 +1,86 @@
+
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 2rem ;
+        opacity: 1;
+        font-weight: bold;
+    }
+    .header.active {   /* Esta classe es para darle el box-sadow cuando el scrolles mayor que cero*/
+        box-shadow: var(--box-shadow);  /* se activa con javaScript*/
+        padding: 2rem;
+     }
+    .home h1 {    
+        top: 400px;
+    }
+     section {
+        padding: 2rem;
+    }
+    .contactos .row form {
+        width: 80%;
+        border: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu--btn { /* para la img del icon del menu */
+        display: block;
+    }
+    .header #menu--btn .img-cerrar { /* para la img del icon del menu */
+        display: none;
+    }
+    #menu--btn .img-cerrar {
+        transform: rotate(180deg);
+    }
+     .img-menu {
+        transform: rotate(180deg);
+    }
+    .header #login-btn img { /* Para el icono del login */
+        display: block;
+    }
+    .header #login-btn .btn {  /* Para el botton del login */
+        display: none;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: var(--border);
+        display: none;
+    }
+    .header .navbar.active {
+        display: inline-block;
+    }
+    .header .navbar a { /* Alinea el menu del navbar a la izquierda */
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+    .home h1 {    
+        top: 250px;
+    }
+    .contactos .row form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .heiding {
+        font-size: 3rem;
+    }
+    .home h1 {    
+        top: 160px;
+    }
+    .contactos .row form {
+        width: 100%;
+        border: none;
+    }
+}
