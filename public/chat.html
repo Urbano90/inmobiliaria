@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Inmobiliaria</title>
+    <link rel="stylesheet" href="/css/chat.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-sidebar">
+            <div class="chat-header">
+                <h2>Conversaciones</h2>
+            </div>
+            <ul class="chat-list" id="chatList">
+                <!-- Los chats se cargarán dinámicamente aquí -->
+            </ul>
+        </div>
+        <div class="chat-main">
+            <div class="chat-header" id="chatHeader">
+                <h2>Selecciona una conversación</h2>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Los mensajes se cargarán dinámicamente aquí -->
+            </div>
+            <div class="chat-input">
+                <form id="messageForm">
+                    <input type="text" id="messageInput" placeholder="Escribe un mensaje..." required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/chat.js"></script>
+</body>
+</html> 

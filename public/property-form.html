@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Propiedad - Inmobiliaria</title>
+    <link rel="stylesheet" href="/css/property-form.css">
+</head>
+<body>
+    <div class="property-form-container">
+        <h1>Publicar Nueva Propiedad</h1>
+        <form id="propertyForm" enctype="multipart/form-data">
+            <div class="form-section">
+                <h2>Información Básica</h2>
+                <div class="form-group">
+                    <label for="title">Título</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Descripción</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="type">Tipo de Propiedad</label>
+                    <select id="type" name="type" required>
+                        <option value="casa">Casa</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="terreno">Terreno</option>
+                        <option value="local">Local</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="operation">Operación</label>
+                    <select id="operation" name="operation" required>
+                        <option value="venta">Venta</option>
+                        <option value="alquiler">Alquiler</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="price">Precio</label>
+                    <input type="number" id="price" name="price" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Ubicación</h2>
+                <div class="form-group">
+                    <label for="address">Dirección</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">Ciudad</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">Estado/Provincia</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Características</h2>
+                <div class="form-group">
+                    <label for="bedrooms">Habitaciones</label>
+                    <input type="number" id="bedrooms" name="bedrooms" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="bathrooms">Baños</label>
+                    <input type="number" id="bathrooms" name="bathrooms" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="area">Área (m²)</label>
+                    <input type="number" id="area" name="area" min="0">
+                </div>
+                <div class="form-group checkbox">
+                    <label>
+                        <input type="checkbox" id="parking" name="parking">
+                        Estacionamiento
+                    </label>
+                </div>
+                <div class="form-group checkbox">
+                    <label>
+                        <input type="checkbox" id="furnished" name="furnished">
+                        Amueblado
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Imágenes</h2>
+                <div class="form-group">
+                    <label for="images">Subir imágenes</label>
+                    <input type="file" id="images" name="images" multiple accept="image/*" required>
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Publicar Propiedad</button>
+        </form>
+    </div>
+
+    <script src="/js/property-form.js"></script>
+</body>
+</html> 
