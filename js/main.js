@@ -1,5 +1,4 @@
 
-
 let menuBtn = document.querySelector(".menu--btn");
 let menu = document.querySelector(".img-menu");
 let cerrar = document.querySelector(".img-cerrar");
@@ -8,7 +7,6 @@ let nombre = document.getElementById("nombre").value;
 let correo = document.getElementById("correo").value;
 
 let enviarMensaje = document.getElementById("enviarMensaje");
-
 
 /****Hacemos que se cambien los iconos del menu y cerrar menu al presionar los icon*****/
 menu.addEventListener("click", function() {
@@ -24,16 +22,12 @@ cerrar.addEventListener("click", function () {
     document.querySelector(".img-cerrar").style.display = "none";
 });
 
-
 /****cambiamos el icono del cerrar menu a menu al hacer click el navbar ****/
 navbar.addEventListener("click", function() {
     navbar.classList.remove("active");
     document.querySelector(".img-cerrar").style.display="none";
     document.querySelector(".img-menu").style.display = "block";
 });
-
-
-
 
 /***Si el scroll es mayor que 0 activa la classe header que tiene el box-sadow */
 window.onscroll = () => {
